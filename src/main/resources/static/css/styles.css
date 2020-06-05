@@ -16,6 +16,8 @@ h1 {
         padding: 10px;
         text-align: center;
         background-color: white;
+        font-size: 50px;
+        text-decoration: underline;
 }
 
 table {
@@ -24,3 +26,49 @@ table {
             padding: 10px;
             text-align: center;
 }
+
+.head {
+    font-weight: bold;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 10px black;
+}
+
+.box1{
+     display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid black;
+      background-color: #ff3333;
+      text-align: center;
+}
+.box2{
+     display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid black;
+      background-color: #ff66a3;
+}
+.box3{
+     display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid black;
+      background-color: #862d86;
+}
+.box4{
+     display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid black;
+      background-color: #6666ff;
+}
+
