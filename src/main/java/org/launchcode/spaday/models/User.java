@@ -1,9 +1,25 @@
 package org.launchcode.spaday.models;
 
+import java.util.Date;
+
 public class User {
     private String username;
     private String email;
     private String password;
+    private int id;
+    private Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public int getId(){
+        return id;
+    }
 
     public String getUsername() {
         return username;

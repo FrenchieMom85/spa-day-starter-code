@@ -8,5 +8,12 @@
 <h2 th:text="'Welcome to your profile, ' + ${user.getUsername()} + '!'"></h2>
 <a th:href="@{/}">Service Selection</a>
 
+<div>
+    <th:block>
+        <ul th:each="name : ${users}">
+            <li><a th:href="@{/user/detail}" th:text="${name.getUserName()}"></a>blah</li>
+        </ul>
+    </th:block>
+</div>
 </body>
 </html>
