@@ -2,17 +2,17 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title th:text="'Welcome ' + ${user.getUsername()} + '!'"></title>
+    <title th:text="'Welcome ' + ${username} + '!'"></title>
 </head>
 <body>
-<h2 th:text="'Welcome to your profile, ' + ${user.getUsername()} + '!'"></h2>
+<h2 th:text="'Welcome to your profile, ' + ${username} + '!'"></h2>
 <a th:href="@{/}">Service Selection</a>
 
 <div>
     <th:block>
-        <ul th:each="name : ${users}">
-            <li><a th:href="@{/user/detail}" th:text="${name.getUserName()}"></a>blah</li>
-        </ul>
+    <ul th:each="each : ${users}">
+        <li><a th:href="@{/user/detail}" th:text="${each.username}"></a></li>
+    </ul>
     </th:block>
 </div>
 </body>

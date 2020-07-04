@@ -8,14 +8,14 @@ public class UserData {
     static User user = new User();
     static ArrayList<User> users = new ArrayList<>();
 
-    public void addUser(){
-        if(user != user){
-            users.add(user);
+    public static void addUser(User u){
+        if(user != u){
+            users.add(u);
         }
     }
 
     public static ArrayList<User> getAll(){
-        return users;
+        return new ArrayList<>(users);
     }
 
     public User getById(){

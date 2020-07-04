@@ -2,19 +2,20 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
     <title>Title</title>
 </head>
 <body>
 
-<table>
-    <th:block th:each="user : ${users}">
+<table class="detail">
+    <th:block>
         <tr>
             <th>Username</th>
             <th>Email</th>
         </tr>
-        <tr>
-            <td th:text="${user.getUserName()}"></td>
-            <td th:text="${user.getEmail()}"></td>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.email}"></td>
         </tr>
     </th:block>
 </table>

@@ -29,11 +29,11 @@ public class UserController {
         model.addAttribute("email", user.getEmail());
         model.addAttribute("verify", verify);
 
-//        if(errors.hasErrors()) {
-//            //System.out.println("error");
-//            return "user/add";
-//        }
         if (user.getPassword().equals(verify)) {
+            UserData.addUser(user);
+            model.addAttribute("user", user);
+            ArrayList<User> users = UserData.getAll();
+            model.addAttribute("users", users);
             return "user/index";
 
         } else {
@@ -43,10 +43,9 @@ public class UserController {
 
     }
 
-    @RequestMapping("detail")
+    @RequestMapping("/detail")
     public String displayAllUsers(Model model, @ModelAttribute User user){
-        ArrayList<User> users;
-        users = UserData.getAll();
+        ArrayList<User> users = UserData.getAll();
         model.addAttribute("user", user);
         model.addAttribute("users", users);
         model.addAttribute("username", user.getUsername());
