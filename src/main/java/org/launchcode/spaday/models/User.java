@@ -30,7 +30,7 @@ public class User {
     private void checkPassword(String password, String verifyPassword){
         if(password != null && verifyPassword != null){
             if(password != verifyPassword)
-                verifyPassword = null;
+                this.verifyPassword = null;
         }
     }
 
